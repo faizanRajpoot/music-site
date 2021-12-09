@@ -1,0 +1,105 @@
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-size: 62.5%;
+    font-family: 'Oswald', sans-serif;
+    color: white;
+}
+
+// Variables
+$color-light:#202326;
+$color-dark:#010305;
+$color-gray: rgba(255, 255, 255, 0.822);
+
+// Responsive
+
+$ipad-pro: 1024px;
+$ipad: 768px;
+$iphone-x: 375px;
+
+// mixin responsive
+@mixin responsive ($display) {
+    @media (max-width: $display){
+         @content;
+     }  
+ }
+
+// Main NAv
+.nav-main{
+    position: fixed;
+    width: 100%;
+    padding: 1rem 0;
+    background-color: $color-dark;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    border-bottom: 1px solid $color-light;
+
+    &-logo{
+        display: flex;
+        align-items: center;
+        .logo{
+            font-size: 1.6rem;
+        }
+    }
+    &-search{
+        background-color: #202326;
+        width: 40%;
+        padding:.7rem 1rem;
+        border-radius: 50px;
+        border: none;
+    }
+    &-list{
+        display: flex;
+        align-items: center;
+        color: $color-gray;
+        li{
+            list-style: none;
+            font-size: 1rem;
+            &:not(:first-child){
+                padding: 0 2.5rem;
+            }
+        }
+        .item{
+            background-color: orangered;
+            padding:0rem 1.5rem;
+            border-radius: 50px;
+        }
+    }
+}
+
+// Side Nav
+.nav-side{
+    margin: 4.6rem 0;
+    position: fixed;
+    display: flex;
+    flex-direction: row;
+    &-content{
+        border-right: 1px solid $color-light;
+        background-color: $color-dark;
+
+        .side-heading{
+            color: $color-gray;
+            margin: 2rem 1rem;
+        }
+
+        .side-list{
+            font-size: .8rem;
+            margin: 2rem 2rem;
+            margin-right: 5rem;
+            color: $color-gray;
+            li{
+                list-style: none;
+                padding: .4rem 0;
+            }
+            .icon{
+                font-size: 1rem;
+                color: orangered;
+                padding: 0 1rem;
+            }
+        }
+    }
+}

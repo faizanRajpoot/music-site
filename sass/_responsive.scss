@@ -1,0 +1,117 @@
+@include responsive($ipad-pro){
+    .section{
+        // background-color: red !important;
+        // .featured{
+        //     display: none;
+        // }
+        .card{
+            img{
+                width: 200px !important;
+            }
+        }
+    }   
+}
+
+@include responsive($ipad-pro){
+    .nav-side{
+        height: 100vh;
+        
+       &-content{
+           .side-heading{
+               margin: 1.6rem 2rem;
+
+           }
+           .side-list{
+               margin: 0 4rem;
+               font-size: .5rem;
+               li{
+                   padding: .2rem;
+               }
+               .icon{
+                   font-size: .6rem;
+               }
+           }
+       } 
+    }
+}
+
+@include responsive($ipad) {
+
+    .section{
+        width: 79% !important;
+        margin-left: 160px;
+        //  background-color: red !important;
+
+         .featured{
+             display: none;
+         }
+         .card{
+             img{
+                //  margin-left: 50px;
+                 padding: 0;
+                 margin: 0;
+                 width: 280px !important;
+             }
+         }
+    }
+
+    .nav-side{
+        margin: 4.3rem 0;
+        height: 100vh;
+        &-content{
+            margin: 2px 0;
+            padding: 3px;
+            }
+        }
+    }
+
+    @include responsive ($iphone-x){
+        .nav-main{
+            padding: 1rem 1rem;
+            // background-color: red !important;
+            &-logo{
+                .logo{
+                    font-size: 1rem;
+                    margin-right: 1rem;
+                }
+            }
+            &-search{
+                flex-grow: 1;
+            }
+            &-list{
+                li{
+                    font-size: .6rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+
+        .nav-side{
+            // background-color: red !important;
+            height: 100vh;
+            margin: 6.1rem 0;
+            
+            &-content{
+                padding: 0rem;
+                .side-heading{
+                    margin: 1rem;
+                    font-size: .8rem;
+                }
+                .side-list{
+                    margin: 1rem 0;
+                }
+            }
+        }
+
+        .section{
+            // background-color: red !important;
+            margin-left: 75px;
+            width: 80% !important;
+
+            .card{
+                img{
+                    width: 200px !important;
+                }
+            }
+        }
+    }
